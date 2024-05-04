@@ -369,6 +369,154 @@ console.log(person[lastNameProperty]);
 console.log(person.firstname);
 console.log(person.lastname);
 
+person.address =new Object();
+person.address.street='b c colony';
+person.address.city='chennekothapalli';
+person.address.state='andrapradesh';
+
+console.log(person.address.street);
+console.log(person.address.city);
+console.log(person["address"]['state']);
+
+//By Using Object Literals
+
+var Tony = {
+  firstname: "shaik",
+  lastname: "shabbeer",
+  address: {
+    street: "b c colony",
+    city: "chennekothapalli ",
+    state: "Andrapradesh",
+  },
+};
+
+function greet(a) {
+  console.log(a);
+  console.log("Hi " + a.firstname);
+}
+
+greet(Tony);
+
+greet({
+  firstname: "Bandaru",
+  lastname: "vijay",
+});
+
+Tony.address2 = {
+  street: "sivalayam veedi",
+};
+
+console.log(Tony);
+
+greet({
+  firstname: "Sivakumar",
+  lastname: "Kalisetty",
+});
+
+// Functions are Objects
+
+function greet() {
+  console.log("hi");
+}
+
+greet.language = "english";
+console.log(greet.language);
+
+// Function Statements and Expressions
+
+greet();
+
+function greet() {
+  console.log("hi");
+}
+
+console.log(anonymousGreet);
+
+//anonymousGreet();
+
+var anonymousGreet = function () {
+  console.log("hi anonymous");
+};
+
+console.log(anonymousGreet);
+
+anonymousGreet();
+
+function log(a) {
+  a();
+}
+
+log(function b() {
+  console.log("Hello guys");
+});
+
+// log(function b() {
+//   console.log("Calling function nbhsdhjsdjh");
+// });
+
+// Call By Value and Call Reference
+
+// by value (primitives)
+var a = 3;
+var b;
+console.log(a);
+console.log(b);
+b = a;
+a = 2;
+
+console.log(a);
+console.log(b);
+
+// by reference (all objects (including functions))
+var c = { greeting: "hi" };
+var d;
+
+d = c;
+c.greeting = "hello"; // mutate
+
+console.log(c);
+console.log(d);
+
+// by reference (even as parameters)
+function changeGreeting(obj) {
+  obj.greeting = "Hola"; // mutate
+}
+
+changeGreeting(d);
+console.log(c);
+console.log(d);
+
+// equals operator sets up new memory space (new address)
+c = { greeting: "howdy" };
+console.log(c);
+console.log(d);
+
+// UnderStanding of this keyword
+
+function hello() {
+  console.log(this);
+  this.newvariable = "hello";
+}
+
+var hola = function () {
+  console.log(this);
+};
+
+hello();
+
+console.log(this.newvariable); // not good!
+
+hola();
+
+var c = {
+  name: "The c object",
+  log: function () {
+    console.log(this);
+  },
+};
+
+c.log();
+
 
 
 
