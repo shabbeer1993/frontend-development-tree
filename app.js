@@ -559,35 +559,42 @@
 //Arrays
 
 
-var arr = [
-  1,
-  false,
-  {
-    name: "Tony",
-    address: "111 Main St.",
-  },
-  function (name) {
-    console.log(name);
-    var greeting = "Hello ";
-    console.log(greeting + name);
-  },
-  "hello",
-];
+// var arr = [
+//   1,
+//   false,
+//   {
+//     name: "Tony",
+//     address: "111 Main St.",
+//   },
+//   function (name) {
+//     console.log(name);
+//     var greeting = "Hello ";
+//     console.log(greeting + name);
+//   },
+//   "hello",
+// ];
 
-console.log(arr);
-arr[3](arr[2].name);
-//arr[3](arr[2].name);
+// console.log(arr[3]);
+// console.log(arr);
+// arr[3](arr[2].name);
+// //arr[3](arr[2].name);
 
-// arrays
+// // arrays
 
-var students = ["shabeer", "kiran", "prakash", "badri", 2, true, {}];
+// var students = ["shabeer", "kiran", "prakash", "badri", 2, true, {}];
 
-console.log(students);
+// console.log(students);
 
-console.log(students[0]);
-console.log(students[1]);
-console.log(students[2]);
-console.log(students[3]);
+// console.log(students[0]);
+// console.log(students[1]);
+// console.log(students[2]);
+// console.log(students[3]);
+
+// let name1=['vijay','siva','kiran'];
+// let age1=[30,25,28];
+// let boolean1=[true,false];
+
+// console.log(name1[1]);
 
 // let kiran={
 // gender:'male',
@@ -609,6 +616,127 @@ console.log(students[3]);
 // console.log(vijay);
 
 // let shabbeer=age;
+
+// function statement
+// function greet(name) {
+//   console.log("Hello " + name);
+// }
+// greet("John");
+
+// // using a function expression
+// var greetFunc = function xyz(name) {
+//   console.log("Hello " + name);
+// };
+// greetFunc("John");
+
+// // using an Immediately Invoked Function Expression (IIFE)
+// var greeting = (function (name) {
+//   return "Hello " + name;
+// })("John");
+
+// console.log(greeting);
+
+// // IIFE
+// var firstname = "John";
+
+// (function (name) {
+//   var greeting = "Inside IIFE: Hello";
+//   console.log(greeting + " " + name);
+// })(firstname); // IIFE
+
+
+// // IIFE
+
+// var greeting = "Hola";
+
+// (function (global, name) {
+//   var greeting = "Hello";
+//   // global.greeting = "Hello";
+//   console.log(greeting + " " + name);
+
+//   function greet() {
+//     console.log("Hello JavaScript");
+//   }
+
+//   greet();
+// })(window, "John"); // IIFE
+
+// console.log(greeting);
+
+//closuers
+// function greet(whattosay) {
+//   return function (name) {
+//     console.log(whattosay + " " + name);
+//   };
+// }
+
+// var sayHi = greet("Hi");
+// console.log(sayHi);
+
+
+//IIFE (Example 1)
+
+(function(){
+  let locVar='This is local Variable';
+  console.log(locVar);
+
+})();
+
+//IIFE(Example 2)
+
+let result=(function(){
+  let x=10;
+  let y=90;
+  return x+y;
+})();
+
+console.log(result);
+
+//IIFE (Example 3)
+
+var counter=(function(){
+  var count=0;
+  return{
+    increment:function(){
+      count++;
+    },
+      decrement:function(){
+        count--;
+
+      },
+     getcount:function(){
+      return count;
+     },
+     
+  };
+})();
+
+counter.increment();
+counter.increment();
+counter.decrement();
+
+console.log(counter.getcount());
+
+
+console.log(counter.count);
+
+console.log(counter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
