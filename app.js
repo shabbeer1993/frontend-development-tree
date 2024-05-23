@@ -663,15 +663,15 @@
 
 // console.log(greeting);
 
-closuers
-function greet(whattosay) {
-  return function (name) {
-    console.log(whattosay + " " + name);
-  };
-}
+// closuers
+// function greet(whattosay) {
+//   return function (name) {
+//     console.log(whattosay + " " + name);
+//   };
+// }
 
-var sayHi = greet("Hi");
-console.log(sayHi);
+// var sayHi = greet("Hi");
+// console.log(sayHi);
 
 
 //IIFE (Example 1)
@@ -722,7 +722,7 @@ console.log(sayHi);
 
 // console.log(counter);
 
-//closure 
+// //closure 
 
 // function outerFunction(X){
 //   var innerVar=10;
@@ -740,26 +740,36 @@ console.log(sayHi);
 //Array's
 
 
-var arr = [
-  1,
-  false,
-  {
-    name: "Tony",
-    address: "111 Main St.",
-  },
-  function (name) {
-    console.log(name);
-    var greeting = "Hello ";
-    console.log(greeting + name);
-  },
-  "hello",
-];
+// var arr = [
+//   1,
+//   false,
+//   {
+//     name: "Tony",
+//     address: "111 Main St.",
+//   },
+//   function (name) {
+//     console.log(name);
+//     var greeting = "Hello ";
+//     console.log(greeting + name);
+//   },
+//   "hello",
+// ];
 
-arr[3](arr[2].name);
+// arr[3](arr[2].name);
 
-arr[3]('shabbeer');
+// arr[3]('shabbeer');
 
 //console.log(arr[3](arr[2].name));
+
+//closuers
+function greet(whattosay) {
+  return function (name) {
+    console.log(whattosay + " " + name);
+  };
+}
+
+var sayHi = greet("Hi");
+console.log(sayHi("shabbeer"));
 
 
 
