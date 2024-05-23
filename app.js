@@ -724,18 +724,42 @@
 
 //closure 
 
-function outerFunction(X){
-  var innerVar=10;
-  function innerFunction(){
-    return X+innerVar;
+// function outerFunction(X){
+//   var innerVar=10;
+//   function innerFunction(){
+//     return X+innerVar;
 
-  }
-  return innerFunction;
-}
+//   }
+//   return innerFunction;
+// }
 
-var clouser=outerFunction(5);
+// var clouser=outerFunction(5);
 
-console.log(clouser());
+// console.log(clouser());
+
+//Array's
+
+
+var arr = [
+  1,
+  false,
+  {
+    name: "Tony",
+    address: "111 Main St.",
+  },
+  function (name) {
+    console.log(name);
+    var greeting = "Hello ";
+    console.log(greeting + name);
+  },
+  "hello",
+];
+
+arr[3](arr[2].name);
+
+arr[3]('shabbeer');
+
+//console.log(arr[3](arr[2].name));
 
 
 
