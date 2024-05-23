@@ -676,52 +676,66 @@
 
 //IIFE (Example 1)
 
-(function(){
-  let locVar='This is local Variable';
-  console.log(locVar);
+// (function(){
+//   let locVar='This is local Variable';
+//   console.log(locVar);
 
-})();
+// })();
 
-//IIFE(Example 2)
+// //IIFE(Example 2)
 
-let result=(function(){
-  let x=10;
-  let y=90;
-  return x+y;
-})();
+// let result=(function(){
+//   let x=10;
+//   let y=90;
+//   return x+y;
+// })();
 
-console.log(result);
+// console.log(result);
 
-//IIFE (Example 3)
+// //IIFE (Example 3)
 
-var counter=(function(){
-  var count=0;
-  return{
-    increment:function(){
-      count++;
-    },
-      decrement:function(){
-        count--;
+// var counter=(function(){
+//   var count=0;
+//   return{
+//     increment:function(){
+//       count++;
+//     },
+//       decrement:function(){
+//         count--;
 
-      },
-     getcount:function(){
-      return count;
-     },
+//       },
+//      getcount:function(){
+//       return count;
+//      },
      
-  };
-})();
+//   };
+// })();
 
-counter.increment();
-counter.increment();
-counter.decrement();
+// counter.increment();
+// counter.increment();
+// counter.decrement();
 
-console.log(counter.getcount());
+// console.log(counter.getcount());
 
 
-console.log(counter.count);
+// console.log(counter.count);
 
-console.log(counter);
+// console.log(counter);
 
+//closure 
+
+function outerFunction(X){
+  var innerVar=10;
+  function innerFunction(){
+    return X+innerVar;
+
+  }
+  return innerFunction;
+}
+
+var clouser=outerFunction(5);
+
+console.log(clouser());
 
 
 
