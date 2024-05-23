@@ -663,15 +663,15 @@
 
 // console.log(greeting);
 
-//closuers
-// function greet(whattosay) {
-//   return function (name) {
-//     console.log(whattosay + " " + name);
-//   };
-// }
+closuers
+function greet(whattosay) {
+  return function (name) {
+    console.log(whattosay + " " + name);
+  };
+}
 
-// var sayHi = greet("Hi");
-// console.log(sayHi);
+var sayHi = greet("Hi");
+console.log(sayHi);
 
 
 //IIFE (Example 1)
