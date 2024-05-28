@@ -761,15 +761,69 @@
 
 //console.log(arr[3](arr[2].name));
 
-//closuers
-function greet(whattosay) {
-  return function (name) {
-    console.log(whattosay + " " + name);
-  };
+// //closuers
+// function greet(whattosay) {
+//   return function (name) {
+//     console.log(whattosay + " " + name);
+//   };
+// }
+
+// var sayHi = greet("Hi");
+// console.log(sayHi("shabbeer"));
+
+//closuers using for loop
+
+function buildFunctions(){
+  var arr=[];
+  for(var i=0;i<4;i++){
+    arr.push(function (){
+      console.log(i);
+    })
+  }
+  return arr;
+}
+let fs=buildFunctions();
+
+fs[0]();
+fs[1]();
+fs[2]();
+
+//closuers for loop
+function buildFunctions1() {
+ 
+  var arr = [];
+  
+  for (var i = 0; i <=5; i++) {
+    varj=i;
+      
+      arr.push(
+          (function(j) {
+            return function(){
+              console.log(j); 
+          }  
+          }
+      )(i))
+      
+  }
+  
+  return arr;
 }
 
-var sayHi = greet("Hi");
-console.log(sayHi("shabbeer"));
+var fs1 = buildFunctions1();
+
+console.log(fs1)
+
+fs1[0]();
+fs1[1]();
+fs1[2]();
+fs1[3]();
+fs1[4]();
+fs1[5]();
+console.log(fs1[5]);
+
+
+
+
 
 
 
