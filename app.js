@@ -773,56 +773,147 @@
 
 //closuers using for loop
 
-function buildFunctions(){
-  var arr=[];
-  for(var i=0;i<4;i++){
-    arr.push(function (){
-      console.log(i);
-    })
-  }
-  return arr;
-}
-let fs=buildFunctions();
+// function buildFunctions(){
+//   var arr=[];
+//   for(var i=0;i<4;i++){
+//     arr.push(function (){
+//       console.log(i);
+//     })
+//   }
+//   return arr;
+// }
+// let fs=buildFunctions();
 
-fs[0]();
-fs[1]();
-fs[2]();
+// fs[0]();
+// fs[1]();
+// fs[2]();
 
-//closuers for loop
-function buildFunctions1() {
+// //closuers for loop
+// function buildFunctions1() {
  
-  var arr = [];
+//   var arr = [];
   
-  for (var i = 0; i <=5; i++) {
-    varj=i;
+//   for (var i = 0; i <=5; i++) {
+//     varj=i;
       
-      arr.push(
-          (function(j) {
-            return function(){
-              console.log(j); 
-          }  
-          }
-      )(i))
+//       arr.push(
+//           (function(j) {
+//             return function(){
+//               console.log(j); 
+//           }  
+//           }
+//       )(i))
       
-  }
+//   }
   
-  return arr;
+//   return arr;
+// }
+
+// var fs1 = buildFunctions1();
+
+// console.log(fs1)
+
+// fs1[0]();
+// fs1[1]();
+// fs1[2]();
+// fs1[3]();
+// fs1[4]();
+// console.log(fs1[5]);
+
+
+//Global Variables 
+
+// function myFunction(){
+//   let a=5;
+//   return a*a;
+// }
+
+// var mul=myFunction();
+// console.log(mul);
+
+
+// let a=5;
+// function myFunction(){
+//   return a*(a+3);
+
+// }
+// let closuer= myFunction();
+// console.log(closuer);
+
+//callback
+
+// function as(callBack){
+//   console.log('function as called');
+
+//   console.log('as function execution completed');
+//   fiveProperties={
+//     empId:1234567,
+//     name:'shabbeer',
+//     age:31,
+//   }
+//   callBack(fiveProperties);
+  
+// }
+
+// as(function callBack(){
+//   console.log('callback function called');
+//   console.log(fiveProperties);
+  
+
+// })
+
+
+// function r(v){
+//   console.log('function r called');
+//   cars={
+//     name:'skoda',
+//     color:'Red',
+//     number:12345,
+//   }
+//   v(cars);
+
+// }
+// r(function v(){
+//   console.log('function v called ');
+//   console.log(cars);
+
+// })
+
+// function greet(name,callback){
+//   console.log('hi'+' '+name);
+//   callback();
+// }
+// function callMe(){
+//   console.log('iam callback function');
+
+// }
+// greet('shabbeer',callMe);
+
+
+//Program that shows the delay in execution
+
+// function greet(){
+//   console.log('hello world');
+// }
+// function sayName(name){
+//   console.log('hello'+'  '+name);
+
+// }
+// //calling the function
+// setTimeout(greet,2000);
+// sayName('shabbeer');
+
+//callback function example
+
+function greet(name,myFunction){
+  console.log('helo world');
+  myFunction(name);
 }
+function callMe(name){
+  console.log('hello'+'  '+name);
 
-var fs1 = buildFunctions1();
-
-console.log(fs1)
-
-fs1[0]();
-fs1[1]();
-fs1[2]();
-fs1[3]();
-fs1[4]();
-fs1[5]();
-console.log(fs1[5]);
-
-
-
+}
+setTimeout(greet, 2000,'shabbeer',callMe);
 
 
 
