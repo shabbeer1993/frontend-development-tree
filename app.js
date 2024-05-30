@@ -905,15 +905,89 @@
 
 //callback function example
 
-function greet(name,myFunction){
-  console.log('helo world');
-  myFunction(name);
-}
-function callMe(name){
-  console.log('hello'+'  '+name);
+// function greet(name,myFunction){
+//   console.log('helo world');
+//   myFunction(name);
+// }
+// function callMe(name){
+//   console.log('hello'+'  '+name);
 
+// }
+// setTimeout(greet, 2000,'shabbeer',callMe);
+
+//Callback using arrays
+
+// function as(av){
+//   console.log("Iam as function");
+ 
+// var arr = [
+//   1,
+//   false,
+//   {
+//     name: "Tony",
+//     address: "111 Main St.",
+//   },
+//   function (name) {
+//     console.log(name);
+//     var greeting = "Hello ";
+//     console.log(greeting + name);
+//   },
+//   "hello",
+// ];
+// console.log('Array values are printing:');
+//     av(arr);
+   
+   
+// }
+
+// as(function av(arr){
+//   console.log(arr);
+//   console.log(arr[0]);
+//   console.log(arr[1]);
+//   console.log(arr[2]);
+//   console.log(arr[3])
+//   console.log('iam av function');
+
+
+// })
+
+//callback
+
+function rrr(callback){
+  console.log("Iam RRR function");
+  var arr = [
+    1,
+    false,
+    {
+      name: "Tony",
+      address: "111 Main St.",
+    },
+    function rs(name) {
+      console.log(name);
+      var greeting = "Hello ";
+      console.log(greeting + name);
+    },
+    "hello",
+  ];
+
+  callback(arr);
+ 
 }
-setTimeout(greet, 2000,'shabbeer',callMe);
+function callme(arr){
+  console.log('iam callme funcrtion ');
+  console.log("array values are:")
+  console.log(arr);
+  console.log(arr[0]);
+  console.log(arr[1]);
+  console.log(arr[2]);
+  console.log(arr[2].name);
+  console.log(arr[3]);
+  console.log(arr[3]('shabbeer'));
+  console.log(arr[4]);
+}
+
+rrr(callme);
+
 
 
 
