@@ -990,23 +990,38 @@
 
 //call back using objects
 
-function rrr(callback){
-  console.log('Iam RRR function');
-  person={
-    name:'shabbeer',
-    age:30,
-    gender:'male'
-  }
-  callback();
+// function rrr(callback){
+//   console.log('Iam RRR function');
+//   person={
+//     name:'shabbeer',
+//     age:30,
+//     gender:'male'
+//   }
+//   callback();
    
-}
-function callMe(){
-  console.log("iam callme function");
-  console.log(person);
-  console.log(person.name);
-  console.log(person.age);
-  console.log(person.gender);
+// }
+// function callMe(){
+//   console.log("iam callme function");
+//   console.log(person);
+//   console.log(person.name);
+//   console.log(person.age);
+//   console.log(person.gender);
 
+// }
+// rrr(callMe);
+
+//callback using for loop
+
+function rrr(callback){
+  console.log('iam rrr function');
+  for(var i=0;i < 5;i++){
+    console.log(i);
+  }
+  callback(i);
+}
+function callMe(i){
+  console.log('iam callme function');
+  console.log(i);
 }
 rrr(callMe);
 
