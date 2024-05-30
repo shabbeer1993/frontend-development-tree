@@ -953,40 +953,62 @@
 
 //callback
 
-function rrr(callback){
-  console.log("Iam RRR function");
-  var arr = [
-    1,
-    false,
-    {
-      name: "Tony",
-      address: "111 Main St.",
-    },
-    function rs(name) {
-      console.log(name);
-      var greeting = "Hello ";
-      console.log(greeting + name);
-    },
-    "hello",
-  ];
+// function rrr(callback){
+//   console.log("Iam RRR function");
+//   var arr = [
+//     1,
+//     false,
+//     {
+//       name: "Tony",
+//       address: "111 Main St.",
+//     },
+//     function rs(name) {
+//       console.log(name);
+//       var greeting = "Hello ";
+//       console.log(greeting + name);
+//     },
+//     "hello",
+//   ];
 
-  callback(arr);
+//   callback(arr);
  
-}
-function callme(arr){
-  console.log('iam callme funcrtion ');
-  console.log("array values are:")
-  console.log(arr);
-  console.log(arr[0]);
-  console.log(arr[1]);
-  console.log(arr[2]);
-  console.log(arr[2].name);
-  console.log(arr[3]);
-  console.log(arr[3]('shabbeer'));
-  console.log(arr[4]);
-}
+// }
+// function callMe(arr){
+//   console.log('iam callme funcrtion ');
+//   console.log("array values are:")
+//   console.log(arr);
+//   console.log(arr[0]);
+//   console.log(arr[1]);
+//   console.log(arr[2]);
+//   console.log(arr[2].name);
+//   console.log(arr[3]);
+//   console.log(arr[3]('shabbeer'));
+//   console.log(arr[4]);
+// }
 
-rrr(callme);
+// rrr(callMe);
+
+//call back using objects
+
+function rrr(callback){
+  console.log('Iam RRR function');
+  person={
+    name:'shabbeer',
+    age:30,
+    gender:'male'
+  }
+  callback();
+   
+}
+function callMe(){
+  console.log("iam callme function");
+  console.log(person);
+  console.log(person.name);
+  console.log(person.age);
+  console.log(person.gender);
+
+}
+rrr(callMe);
 
 
 
