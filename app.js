@@ -1030,24 +1030,54 @@
 
 
 //bind()
+// var person={
+//   firstName:'shaik',
+//   lastName:'shabbeer',
+//   getFullName:function(){
+//     var fullName=this.firstName+this.lastName;
+//     return fullName;
+//   }
+
+// }
+
+// var name=person.getFullName();
+// console.log(name);
+
+// var logName=function (){
+//   console.log("logged:"+""+this.getFullName());
+// }
+// var logPersonName=logName.bind(person);
+// logPersonName();
+
+//call()
+
 var person={
   firstName:'shaik',
   lastName:'shabbeer',
-  getFullName:function(){
+  getFullName:function (){
     var fullName=this.firstName+this.lastName;
     return fullName;
+
   }
-
 }
+var name2=person.getFullName();
+console.log(name2);
 
-var name=person.getFullName();
-console.log(name);
+var logName1=function (lang1,lang2){
+  console.log('logged:'+" "+ this.getFullName());
+  console.log(lang1+' '+lang2);
+}.bind(person,'english','spanish');
+logName1();
 
-var logName=function (){
-  console.log("logged:"+""+this.getFullName());
-}
-var logPersonName=logName.bind(person);
-logPersonName();
+//var logPersonName2=logName1.bind(person,'en','spanish');
+//logPersonName2();
+//console.log(logPersonName2());
+
+
+
+
+
+
 
 
 
