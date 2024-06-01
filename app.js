@@ -1012,18 +1012,43 @@
 
 //callback using for loop
 
-function rrr(callback){
-  console.log('iam rrr function');
-  for(var i=0;i < 5;i++){
-    console.log(i);
+// function rrr(callback){
+//   console.log('iam rrr function');
+//   for(var i=0;i < 5;i++){
+//     console.log(i);
+//   }
+//   callback(i);
+// }
+// function callMe(i){
+//   console.log('iam callme function');
+//   console.log(i);
+// }
+// rrr(callMe);
+
+
+//call(),apply() and bind()
+
+
+//bind()
+var person={
+  firstName:'shaik',
+  lastName:'shabbeer',
+  getFullName:function(){
+    var fullName=this.firstName+this.lastName;
+    return fullName;
   }
-  callback(i);
+
 }
-function callMe(i){
-  console.log('iam callme function');
-  console.log(i);
+
+var name=person.getFullName();
+console.log(name);
+
+var logName=function (){
+  console.log("logged:"+""+this.getFullName());
 }
-rrr(callMe);
+var logPersonName=logName.bind(person);
+logPersonName();
+
 
 
 
