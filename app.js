@@ -1051,28 +1051,101 @@
 
 //call()
 
-var person={
-  firstName:'shaik',
-  lastName:'shabbeer',
-  getFullName:function (){
-    var fullName=this.firstName+this.lastName;
-    return fullName;
+// var person={
+//   firstName:'shaik',
+//   lastName:'shabbeer',
+//   getFullName:function (){
+//     var fullName=this.firstName+this.lastName;
+//     return fullName;
 
-  }
-}
-var name2=person.getFullName();
-console.log(name2);
+//   }
+// }
+// var name2=person.getFullName();
+// console.log(name2);
 
-var logName1=function (lang1,lang2){
-  console.log('logged:'+" "+ this.getFullName());
-  console.log(lang1+' '+lang2);
-}.bind(person,'english','spanish');
-logName1();
+// var logName1=function (lang1,lang2){
+//   console.log('logged:'+" "+ this.getFullName());
+//   console.log(lang1+' '+lang2);
+// }.bind(person,'english','spanish');
+// logName1();
 
 //var logPersonName2=logName1.bind(person,'en','spanish');
 //logPersonName2();
 //console.log(logPersonName2());
 
+// const person={
+//   firstName:'shaik',
+//   lastName:'shabbeer',
+//   myFunction:function(){
+//     console.log(this) ;
+//   }
+// };
+// person.myFunction();
+
+// const person={
+//   firstName:'shaik',
+//   lastName:'shabbeer',
+//   fullName:function(){
+//     console.log(this.firstName+''+this.lastName) ;
+
+//   }
+// };
+// person.fullName();
+
+//call() and apply()
+
+// const person={
+//   fullName:function(lang1,lang2){
+//     console.log(this.firstName+'  '+this.lastName);
+
+//     console.log(lang1+'  '+lang2);
+//   }
+// }
+// const person1={
+//   firstName:'shaik',
+//   lastName:'shabbeer',
+// }
+// const person2={
+//   firstName:'Bandaru',
+//   lastName:'Vijay',
+// }
+// person.fullName.call(person1,'english','telugu');
+// person.fullName.apply(person2,['hindi','kannada']);
+
+//bind()
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    console.log(this.firstName+'  '+this.lastName);
+   
+  }
+}
+const person1={
+  firstName:'shaik',
+  lastName:'shabbeer',
+}
+
+let display = person.display.bind(person1);
+display();
+
+
+setTimeout(display, 3000);
+
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   display: function () {
+//     let x = document.getElementById("demo");
+//     x.innerHTML = this.firstName + " " + this.lastName;
+//   }
+// }
+
+// //person.display();
+
+// let display = person.display.bind(person);
+// display();
+// // setTimeout(display, 3000);
 
 
 
