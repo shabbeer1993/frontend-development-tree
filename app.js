@@ -1113,24 +1113,24 @@
 // person.fullName.apply(person2,['hindi','kannada']);
 
 //bind()
-const person = {
-  firstName:"John",
-  lastName: "Doe",
-  display: function () {
-    console.log(this.firstName+'  '+this.lastName);
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   display: function () {
+//     console.log(this.firstName+'  '+this.lastName);
    
-  }
-}
-const person1={
-  firstName:'shaik',
-  lastName:'shabbeer',
-}
+//   }
+// }
+// const person1={
+//   firstName:'shaik',
+//   lastName:'shabbeer',
+// }
 
-let display = person.display.bind(person1);
-display();
+// let display = person.display.bind(person1);
+// display();
 
 
-setTimeout(display, 3000);
+// setTimeout(display, 3000);
 
 // const person = {
 //   firstName:"John",
@@ -1148,7 +1148,84 @@ setTimeout(display, 3000);
 // // setTimeout(display, 3000);
 
 
+//js classes
 
+class Car{
+  constructor(name,year){
+    this.name=name;
+    this.year=year;
+  }
+  age(){
+    const date=new Date();
+    return date.getFullYear()-this.year;
+  }
+}
+
+const myCar=new Car('ford',2014);
+console.log(document.getElementById('demo').innerHTML="my car is " +myCar.age()+ "  years old.");
+//console.log("my car age " + ''+ myCar.age() + "years old.");
+
+// class car{
+//   constructor(name,year){
+//     this.name=name;
+//     this.year=year;
+//   }
+//   age(X){
+//     return x-this.year;
+//   }
+// }
+
+
+// const date=new Date();
+
+// let year=date.getFullYear();
+// let x=year;
+
+// const myCar=new car('ford',2014);
+// document.getElementById("demo").innerHTML="my car is " + myCar.age(year) +"years old.";
+
+
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+//   age() {
+//     // date = new Date();  // This will not work
+//     const date = new Date(); // This will work
+//     return date.getFullYear() - this.year;
+//   }
+// }
+
+
+// const myCar=new Car("ford",2014);
+// console.log(document.getElementById('demo').innerHTML='my car is ' + myCar.age() + '  years old.');
+//console.log(myCar);
+
+//calss Inheritance
+
+// class Car {
+//   constructor(brand) {
+//     this.carname = brand;
+//   }
+//   present() {
+//     return 'I have a ' + this.carname;
+//   }
+// }
+
+// class Model extends Car {
+//   constructor(brand, mod) {
+//     super(brand);
+//     this.model = mod;
+//   }
+//   show() {
+//     return this.present() + ', it is a ' + this.model;
+//   }
+// }
+
+// let myCar = new Model("Ford", "Mustang");
+// document.getElementById("demo").innerHTML = myCar.show();
+// console.log(myCar.show());
 
 
 
