@@ -1150,19 +1150,19 @@
 
 //js classes
 
-class Car{
-  constructor(name,year){
-    this.name=name;
-    this.year=year;
-  }
-  age(){
-    const date=new Date();
-    return date.getFullYear()-this.year;
-  }
-}
+// class Car{
+//   constructor(name,year){
+//     this.name=name;
+//     this.year=year;
+//   }
+//   age(){
+//     const date=new Date();
+//     return date.getFullYear()-this.year;
+//   }
+// }
 
-const myCar=new Car('ford',2014);
-console.log(document.getElementById('demo').innerHTML="my car is " +myCar.age()+ "  years old.");
+// const myCar=new Car('ford',2014);
+// console.log(document.getElementById('demo').innerHTML="my car is " +myCar.age()+ "  years old.");
 //console.log("my car age " + ''+ myCar.age() + "years old.");
 
 // class car{
@@ -1200,32 +1200,32 @@ console.log(document.getElementById('demo').innerHTML="my car is " +myCar.age()+
 
 // const myCar=new Car("ford",2014);
 // console.log(document.getElementById('demo').innerHTML='my car is ' + myCar.age() + '  years old.');
-//console.log(myCar);
+// console.log(myCar);
 
 //calss Inheritance
 
-// class Car {
-//   constructor(brand) {
-//     this.carname = brand;
-//   }
-//   present() {
-//     return 'I have a ' + this.carname;
-//   }
-// }
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
 
-// class Model extends Car {
-//   constructor(brand, mod) {
-//     super(brand);
-//     this.model = mod;
-//   }
-//   show() {
-//     return this.present() + ', it is a ' + this.model;
-//   }
-// }
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
 
-// let myCar = new Model("Ford", "Mustang");
-// document.getElementById("demo").innerHTML = myCar.show();
-// console.log(myCar.show());
+let myCar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = myCar.show();
+console.log(myCar.show());
 
 
 
